@@ -22,39 +22,88 @@ Youtube-downloader requires an installation of Python 3.6 or greater, as well as
 To install from PyPI with pip:
 
 ```bash
-$ python -m pip install pytube
+$ python3 -m pip install pytube
 ```
 
 Sometimes, the PyPI release becomes slightly outdated. To install from the source with pip:
 
 ```bash
-$ python -m pip install git+https://github.com/pytube/pytube
-```
-
-### Using Youtbe downloader in a Python script
-
-To download a video using the library in a script, you'll need to import the YouTube class from the library and pass an argument of the video URL. From there, you can access the streams and download them.
-
-```python
- >>> from pytube import YouTube
- >>> YouTube('https://youtu.be/2lAe1cqCOXo').streams.first().download()
- >>> yt = YouTube('http://youtube.com/watch?v=2lAe1cqCOXo')
- >>> yt.streams
-  ... .filter(progressive=True, file_extension='mp4')
-  ... .order_by('resolution')
-  ... .desc()
-  ... .first()
-  ... .download()
+$ python3 -m pip install git+https://github.com/pytube/pytube
 ```
 
 ### Using the command-line interface
 
 Using the CLI is remarkably straightforward as well. To download a video at the highest progressive quality, you can use the following command:
 ```bash
-$ pytube https://youtube.com/watch?v=2lAe1cqCOXo
+$ python3 main.py
+...
+...Do yo want to download the playlist? (default: No)
+...no
+...
+...Enter the YouTube video links: 
+...https://www.youtube.com/watch?v=Zd3Mh3TeOGI
+...
+...Do yo want to download in mp3 format (default: No)
+...no
+...
+...Enter the destination (leave blank for current directory)
+...
+...
+...Please wait...
+...Downloading... Gentle Whispering Schools MatPat in ASMR! 
+...
+...Completed :)
+...
+...Thanks for using this service.
+```
+
+You can also do the same for a audio:
+```bash
+$ python3 main.py
+...
+...Do yo want to download the playlist? (default: No)
+...no
+...
+...Enter the YouTube video links: 
+...https://www.youtube.com/watch?v=Zd3Mh3TeOGI
+...
+...Do yo want to download in mp3 format (default: No)
+...yes
+...
+...Enter the destination (leave blank for current directory)
+...
+...
+...Please wait...
+...Downloading... Gentle Whispering Schools MatPat in ASMR! 
+...
+...Completed :)
+...
+...Thanks for using this service.
 ```
 
 You can also do the same for a playlist:
 ```bash
-$ pytube https://www.youtube.com/playlist?list=PLS1QulWo1RIaJECMeUT4LFwJ-ghgoSH6n
+$ python3 main.py
+...
+...Do yo want to download the playlist? (default: No)
+...yes
+...
+...Enter the Playlist URL: 
+...https://www.youtube.com/watch?v=UhhwNVHNIfc&list=PLSXTaG1fT0cTB1W3RGt8WR1nciBbv_QEN
+...Found 2 videos in this playlist
+...
+...Do yo want to download in mp3 format (default: No)
+...
+...
+...Enter the destination (leave blank for current directory)
+...
+...
+...Please wait...
+...Downloading... Kerry की Entry ने Daya को कर दिया दुखी | Taarak Mehta Ka Ooltah Chashmah | Kerry Entry
+...
+...Downloading... Kerry को देखर Popatlal हो गया लट्टू! | Taarak Mehta Ka Ooltah Chashmah | Kerry Entry
+...
+...Completed :)
+...
+...Thanks for using this service.
 ```
