@@ -29,10 +29,13 @@ if __name__ == "__main__":
     print("\nEnter the destination (leave blank for current directory)")
     destination = str(input("")) or '.'
 
-    if "yes" in isDownloadAudio.lower():
-        Audio.download(urls=links, destination=destination)
-    else:
-        Video.download(urls=links, destination=destination)
+    try:
+        if "yes" in isDownloadAudio.lower():
+            Audio.download(urls=links, destination=destination)
+        else:
+            Video.download(urls=links, destination=destination)
+    except:
+        print("\nFound some issue to download it, please check the network connection and try after some time.")
 
     # result of success
     print("\nThanks for using this service.")

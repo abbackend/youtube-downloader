@@ -12,8 +12,13 @@ class Audio:
         for url in urls:
             yt = YouTube(url)
 
+            try:
+                title = yt.title
+            except:
+                title = ""
+
             # Getting the caption
-            print("Downloading... %s \n" % yt.title)
+            print("Downloading... %s \n" % title)
 
             # Set the video stream to the highest resolution
             stream = yt.streams.filter(only_audio=True).first().download(destination)
@@ -36,8 +41,13 @@ class Video:
         for url in urls:
             yt = YouTube(url)
 
+            try:
+                title = yt.title
+            except:
+                title = ""
+
             # Getting the caption
-            print("Downloading... %s \n" % yt.title)
+            print("Downloading... %s \n" % title)
 
             # Set the video stream to the highest resolution
             stream = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
