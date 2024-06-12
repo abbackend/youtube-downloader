@@ -1,3 +1,5 @@
+<img src="https://s1.ezgif.com/tmp/ezgif-1-b7a6619cc9.gif" width="100%"/>
+
 # Youtube Downloader
 
 This is a genuine, lightweight Python script for downloading YouTube videos.
@@ -108,3 +110,6 @@ $ python3 main.py
 ...Thanks for using this service.
 ```
 
+## Authors
+
+- [@abbackend](https://www.github.com/abbackend)
