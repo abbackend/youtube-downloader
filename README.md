@@ -21,13 +21,13 @@ dependencies and aims to be highly reliable.
 
 Youtube-downloader requires an installation of Python 3.6 or greater, as well as pip. (Pip is typically bundled with Python [installations](https://python.org/downloads).)
 
-To install from PyPI with pip:
+To install from pytube with pip:
 
 ```bash
 $ python3 -m pip install pytube
 ```
 
-Sometimes, the PyPI release becomes slightly outdated. To install from the source with pip:
+Sometimes, the pytube release becomes slightly outdated. To install from the source with pip:
 
 ```bash
 $ python3 -m pip install git+https://github.com/pytube/pytube
